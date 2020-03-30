@@ -19,24 +19,9 @@
         + myPHPAdmin
     - The __front-end__ is compiled by the command `ng serve` support by *Angular CLI*, running a live browser.
 
-
-Here's a sentence with a footnote. [^1]
-
-
-term
-: definition
-
 # Views
 1. 
 
 # Tasks
 
 TODO...
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-
-[^1]: This is the footnote.
