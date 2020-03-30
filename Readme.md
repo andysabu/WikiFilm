@@ -17,9 +17,9 @@
         + Web Apache
         + MySQL
         + myPHPAdmin
+![RESTful Web Service](https://phppot.com/wp-content/uploads/2015/10/restful-web-services-api-architecture.jpg)
     - The __front-end__ is compiled by the command `ng serve` support by *Angular CLI*, running a live browser.
 
-![RESTful Web Service](https://phppot.com/wp-content/uploads/2015/10/restful-web-services-api-architecture.jpg)
 
 # Views
 1. List of movies
