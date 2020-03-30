@@ -9,7 +9,10 @@ import { Movie, User } from 'src/app/model/wiki-film';
 })
 export class WikiFilmService extends BaseService {
 
-  private baseURL = 'http://localhost/wiki-film/application/back-end/';
+  // Andrés
+  private baseURL = 'http://localhost:8888/wikifilm/';
+  // Oleg
+  // private baseURL = 'http://localhost/wiki-film/application/back-end/';
   private version = 'api/v1/';
 
   constructor(httpClient: HttpClient) {
@@ -64,4 +67,5 @@ export class WikiFilmService extends BaseService {
     });
   }
 
+  
 }
