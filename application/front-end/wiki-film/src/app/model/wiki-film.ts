@@ -5,3 +5,13 @@ export interface Movie {
     release_date: string;
     director: string;
 }
+
+export interface User {
+    id: string;
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+}
+
+

@@ -6,11 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListMoviesComponent } from './components/list-movies/list-movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ListUsersComponent } from './components/list-users/list-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListMoviesComponent
+    ListMoviesComponent,
+    RegistrationComponent,
+    NavBarComponent,
+    ListUsersComponent
   ],
   imports: [
     BrowserModule,
