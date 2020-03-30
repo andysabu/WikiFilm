@@ -6,7 +6,7 @@ include '../../_dao/user-dao.php';
  * - This function will get all the movies.
  * - No validations are required.
  */
-function getAllUserController() {
+function getAllUsersController() {
     return getAllUsersDAO();
 }
 
