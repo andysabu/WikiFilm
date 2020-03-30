@@ -13,7 +13,7 @@
 4. Project Managment --> [Trello](https://trello.com/b/X6EWAGsu/web-site-mowies)
 5. Servers:
     - The __database__ is installed online. The provider is *freemysqlhosting*.
-    - The __back-end__ is installed in the localhost using the environment *WAMP* / *MAMP* for Windows / Unix system and it contains the bundle:
+    - The __back-end__ is installed in the localhost using the environment *WAMP* / *MAMP* for Windows / Unix systems and it contains the bundle:
         + Web Apache
         + MySQL
         + myPHPAdmin
