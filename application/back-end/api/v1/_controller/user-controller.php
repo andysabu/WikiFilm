@@ -7,7 +7,7 @@ include '../../_dao/user-dao.php';
  * - No validations are required.
  */
 function getAllUserController() {
-    return getAllUserDAO();
+    return getAllUsersDAO();
 }
 
 ?>
