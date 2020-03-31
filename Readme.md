@@ -19,7 +19,7 @@
     * [Add movie](#add-movie)
     * [Playlist](#playlist)
 
-5. [TODO] (#todo)
+5. [TODO](#todo)
 
 # Type of project
 1. Tecnhologies:
