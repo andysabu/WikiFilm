@@ -9,11 +9,11 @@ import { Movie, User, Login } from "src/app/model/wiki-film";
 })
 export class WikiFilmService extends BaseService {
   // Andrés
-  // private baseURL = "http://localhost:8888/wikifilm/";
+  private baseURL = "http://localhost:8888/wikifilm/";
   // Oleg
   // private baseURL = 'http://localhost/wiki-film/application/back-end/';
   //Ilyes
-  private baseURL = "http://localhost/wiki-film/";
+  // private baseURL = "http://localhost/wiki-film/";
 
   private version = "api/v1/";
 
@@ -118,15 +118,39 @@ export class WikiFilmService extends BaseService {
     const url = this.baseURL + request + values;
 
     return Observable.create(observer => {
-      let user = <User>{};
+      // let user = <User>{};
       this.doGET(url).subscribe(response => {
         try {
           console.log(JSON.stringify(response));
-          user = response;
+          observer.next(response);
+        } catch (error) {
+          console.log(error);
+          observer.next(false);
+        }
+      });
+    });
+  }
+
+  getMoviesByDate(): Observable<Movie[]> {
+    console.log("getMoviesByDate...");
+
+    const request = this.version + "movie/getbydate/";
+    const url = this.baseURL + request;
+
+    return Observable.create(observer => {
+      let movies: Movie[] = Array();
+
+      this.doGET(url).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          response.forEach(element => {
+            const movie = element;
+            movies.push(movie);
+          });
         } catch (error) {
           console.log(error);
         }
-        observer.next(user);
+        observer.next(movies);
       });
     });
   }
