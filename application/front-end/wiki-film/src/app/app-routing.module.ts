@@ -3,9 +3,9 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ListMoviesComponent } from "./components/list-movies/list-movies.component";
 import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
-import { LoginComponent } from "./components/login/login.component";
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
+import { AddMovieComponent } from "./components/add-movie/add-movie.component";
 
 const routes: Routes = [
   //declaring roots:
@@ -17,6 +17,11 @@ const routes: Routes = [
   {
     path: 'welcome',
     component: WelcomeComponent
+  },
+    {
+    path: "",
+    redirectTo: "movies",
+    pathMatch: "full"
   },
   {
     path: 'authenticator',
@@ -38,8 +43,8 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "login",
-    component: LoginComponent,
+    path: "addmovie",
+    component: AddMovieComponent,
     pathMatch: "full"
   }
 ];

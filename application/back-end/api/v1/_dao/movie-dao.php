@@ -21,7 +21,7 @@ function getAllMoviesDAO(){
 
 function addMovieDAO($name, $releasedate, $director, $synopsis){
     $table = 'movie';
-    $columns = array("firstname", "lastname", "email", "password");
+    $columns = array("name", "release_date", "director", "synopsis");
     $values = array($name, $releasedate, $director, $synopsis);
 
     $results = doInsert($table, $columns, $values);

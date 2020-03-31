@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { LoginComponent } from './components/login/login.component';
 import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { AddMovieComponent } from "./components/add-movie/add-movie.component";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -24,15 +26,17 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     MovieDetailsComponent,
     LoginComponent,
     AuthenticatorComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

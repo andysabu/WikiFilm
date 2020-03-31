@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+
 @Component({
   selector: "film-nav-bar",
   templateUrl: "./nav-bar.component.html",

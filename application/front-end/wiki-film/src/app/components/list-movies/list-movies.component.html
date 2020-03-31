@@ -1,21 +1,33 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Release date</th>
-      <th>Director</th>
-      <th>Synopsis</th>
-    </tr>
-  </thead>
+<div class="container">
+  <h1>
+    Add new movie
+    <a class="btn-floating btn-large waves-effect waves-light red"
+      ><i class="material-icons" [routerLink]="['/addmovie']">add</i></a
+    >
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Release date</th>
+        <th>Director</th>
+        <th>Synopsis</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr *ngFor="let movie of movies">
-      <td>
-        <a [routerLink]="['/movie', movie.id]">{{ movie.name }}</a>
-      </td>
-      <td>{{ movie.release_date }}</td>
-      <td>{{ movie.director }}</td>
-      <td>{{ movie.synopsis }}</td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>
+          <a [routerLink]="['/movie', movie.id]">{{ movie.name }}</a>
+        </td>
+        <td>{{ movie.release_date }}</td>
+        <td>{{ movie.director }}</td>
+        <td>{{ movie.synopsis }}</td>
+        <a class="btn-floating btn-small waves-effect waves-light red"
+          ><i class="material-icons">add</i></a
+        >
+      </tr>
+    </tbody>
+  </table>
+</div>
