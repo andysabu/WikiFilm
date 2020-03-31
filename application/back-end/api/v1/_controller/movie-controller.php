@@ -10,6 +10,11 @@ function getAllMoviesController() {
     return getAllMoviesDAO();
 }
 
+function searchMovieController($search){
+    return searchMovieDAO($search);
+    // return '5';
+}
+
 function addMovieController($name, $releasedate, $director, $synopsis){
     // ADD VALIDATIONS
     //check on firstname:

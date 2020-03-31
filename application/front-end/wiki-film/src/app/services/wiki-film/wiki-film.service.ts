@@ -21,6 +21,29 @@ export class WikiFilmService extends BaseService {
     super(httpClient);
   }
 
+  searchMovie(inputSearch): Observable<Movie[]> {
+    console.log("getAllMovies...");
+
+    const request = this.version + "movie/search/";
+    const url = this.baseURL + request + "?search=" + inputSearch;
+
+    return Observable.create(observer => {
+      let movies: Movie[] = Array();
+
+      this.doGET(url).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          response.forEach(element => {
+            const movie = element;
+            movies.push(movie);
+          });
+        } catch (error) {
+          console.log(error);
+        }
+        observer.next(movies);
+      });
+    });
+  }
   getAllMovies(): Observable<Movie[]> {
     console.log("getAllMovies...");
 

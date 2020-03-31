@@ -5,6 +5,10 @@
       ><i class="material-icons" [routerLink]="['/addmovie']">add</i></a
     >
   </h1>
+  <h1>
+    Search movie
+    <input type="text" (keyup)="searchMovie($event)" />
+  </h1>
   <table>
     <thead>
       <tr>

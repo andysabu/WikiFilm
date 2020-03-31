@@ -29,6 +29,17 @@ function addMovieDAO($name, $releasedate, $director, $synopsis){
     return $results;
 }
 
+function searchMovieDAO($search){
+    $table = 'movie';
+    $statement = 'WHERE name LIKE "%' . $search . '%";';
+    $results = doSelect($table, $statement);
+    $movies = array();
+    while ($row = mysqli_fetch_assoc($results)) {
+        array_push($movies, $row);
+    } 
+    return $movies;
+}
+
 function getMoviesByDate(){
     $table = 'movie';
     $statement = 'ORDER BY release_date DESC LIMIT 3';

@@ -15,6 +15,7 @@ import { AuthenticatorComponent } from './components/authenticator/authenticator
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AddMovieComponent } from "./components/add-movie/add-movie.component";
 import { RouterModule } from '@angular/router';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     AuthenticatorComponent,
     WelcomeComponent,
-    AddMovieComponent
+    AddMovieComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,15 @@ export class ListMoviesComponent implements OnInit {
     const movies = this.getAllMovies();
   }
 
+  searchMovie(event) {
+    console.log(event);
+    this.wf.searchMovie(event.target.value).subscribe(response => {
+      console.log(response);
+
+      this.movies = response;
+    });
+  }
+
   private getAllMovies() {
     this.wf.getAllMovies().subscribe(response => {
       this.movies = response;

@@ -1,10 +1,10 @@
 <!-- Set CSS style -->
-<link rel="stylesheet" href="components/new-movie/css/style.css">
+<link rel="stylesheet" href="components/user/css/style.css">
 
 <!-- Set HTML schema -->
 <?php
-    include 'components/movie/index.html';
+    include 'components/user/index.html';
 ?>
 
 <!-- Set JS -->
-<script src="components/new-movie/new-movie.js"></script>
+<script src="components/user/user.js"></script>

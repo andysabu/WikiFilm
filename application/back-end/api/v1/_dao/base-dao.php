@@ -2,7 +2,6 @@
 
 // Set the parameters to access the Database
 include '../../../../config/database-config.php';
-include 'utils-dao.php';
 
 /**
  * This function will get all the entries which match with the parsed statement for a specific table.
@@ -16,17 +15,8 @@ function doSelect($table, $statement)
     return runQuery($query);
 }
 
-/**
- * This function will generate the INSERT query to be executed for the parsed table
- * @param string $table nane of the table where the INSERT Will executed
- * @param array|string $columns affected columns
- * @param array|string $values data for that columns
- */
-function doInsert($table, $columns, $values)
+function doInsert()
 {
-    $stringValues = buildValuesString($values);
-    $query = 'INSERT INTO ' . $table . ' (' . implode(", ", $columns) . ') VALUES (' . $stringValues . ')';
-    return runQuery($query);
 }
 
 function doUpdate()
@@ -56,7 +46,5 @@ function runQuery($query) {
 
     return $result;
 }
-
-
 
 ?>
