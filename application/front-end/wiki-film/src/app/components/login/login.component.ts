@@ -34,8 +34,10 @@ export class LoginComponent implements OnInit {
     // TODO Check validations
 
     this.wf.validateCredentials(this.login).subscribe((response) => {
-      this.user = response;
-      if (this.user.id) {
+      if (!response) {
+        M.toast({html: 'Check your credentials'});
+      } else {
+        this.user = response;
         this.showWelcomePage(true);
       }
     });

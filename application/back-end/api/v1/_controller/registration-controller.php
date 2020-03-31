@@ -36,7 +36,10 @@ function addNewUserController($firstname, $lastname, $email, $password)
 }
 
 /**
- * This 
+ * This function will: 
+ * - Get the user for that email
+ * - Compare if the parsed password matches
+ * @return user|false user if it is valid or false if not
  */
 function validateUserController($email, $password) {
 
@@ -44,11 +47,13 @@ function validateUserController($email, $password) {
 
     if (isset($user)) {
         if (password_verify($password, $user['password'])) {
-            // echo 'Correct Password!!!';
+            // Remove the password
+            // It is sensible data which has not to be return to the client side 
+            $user['password'] = '';
             return $user;
         } else {
             // echo 'Wrong Password!!!';
-            return null;
+            return false;
         }
     }
 }

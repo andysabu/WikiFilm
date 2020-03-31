@@ -4,6 +4,7 @@ export interface Movie {
     synopsis: string;
     release_date: string;
     director: string;
+    poster: string;
 }
 
 export interface User {

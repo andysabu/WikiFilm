@@ -16,6 +16,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AddMovieComponent } from "./components/add-movie/add-movie.component";
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './components/search/search.component';
+import { MovieCarouselComponent } from './components/movie-carousel/movie-carousel.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SearchComponent } from './components/search/search.component';
     AuthenticatorComponent,
     WelcomeComponent,
     AddMovieComponent,
-    SearchComponent
+    SearchComponent,
+    MovieCarouselComponent
   ],
   imports: [
     BrowserModule,
