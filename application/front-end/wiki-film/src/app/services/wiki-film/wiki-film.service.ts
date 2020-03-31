@@ -8,13 +8,12 @@ import { Movie, User, Login } from "src/app/model/wiki-film";
   providedIn: "root"
 })
 export class WikiFilmService extends BaseService {
-
   // Andrés
-  private baseURL = "http://localhost:8888/wikifilm/";
+  // private baseURL = "http://localhost:8888/wikifilm/";
   // Oleg
   // private baseURL = 'http://localhost/wiki-film/application/back-end/';
   //Ilyes
-  // private baseURL = "http://localhost/wiki-film/";
+  private baseURL = "http://localhost/wiki-film/";
 
   private version = "api/v1/";
 
@@ -79,15 +78,20 @@ export class WikiFilmService extends BaseService {
       });
     });
   }
-  
-  addUser(user: User): Observable<boolean> {
-    console.log('addUser...');
 
-    const request = this.version + 'registration/signup';
-    const values = '?firstname=' + user.firstname 
-                  + '&lastname=' + user.lastname
-                  + '&email=' + user.email
-                  + '&password=' + user.password;
+  addUser(user: User): Observable<boolean> {
+    console.log("addUser...");
+
+    const request = this.version + "registration/signup";
+    const values =
+      "?firstname=" +
+      user.firstname +
+      "&lastname=" +
+      user.lastname +
+      "&email=" +
+      user.email +
+      "&password=" +
+      user.password;
 
     const url = this.baseURL + request + values;
 
@@ -106,11 +110,10 @@ export class WikiFilmService extends BaseService {
   }
 
   validateCredentials(login: Login): Observable<User> {
-    console.log('validateCredentials...');
+    console.log("validateCredentials...");
 
-    const request = this.version + 'registration/login';
-    const values = '?email=' + login.email
-                  + '&password=' + login.password;
+    const request = this.version + "registration/login";
+    const values = "?email=" + login.email + "&password=" + login.password;
 
     const url = this.baseURL + request + values;
 

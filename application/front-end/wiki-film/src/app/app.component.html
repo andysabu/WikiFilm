@@ -1,8 +1,10 @@
 <div *ngIf="!isAuthenticated">
-    <film-authenticator (isAuthenticated)="doAuthenticated($event)"></film-authenticator>
+  <film-authenticator
+    (isAuthenticated)="doAuthenticated($event)"
+  ></film-authenticator>
 </div>
 
 <div *ngIf="isAuthenticated">
-    <film-nav-bar (emitterSession)="doAuthenticated($event)"></film-nav-bar>
-    <router-outlet></router-outlet>
+  <film-nav-bar (emitterSession)="doAuthenticated($event)"></film-nav-bar>
+  <router-outlet></router-outlet>
 </div>

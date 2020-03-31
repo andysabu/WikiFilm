@@ -22,7 +22,8 @@ function addMovieController($name, $releasedate, $director, $synopsis){
     $okDirector = strlen($director) >= 2;
 
     //Check release Date
-    $okDate = checkdate($releasedate);
+    $okDate = true;
+    // checkdate($releasedate);
 
 
     // All OK --> INSERT user in database

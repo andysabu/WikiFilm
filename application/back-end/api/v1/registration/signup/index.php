@@ -8,5 +8,5 @@ $lastname = $_GET['lastname'];
 $email = $_GET['email'];
 $password = $_GET['password'];
 
-echo json_encode(addMovieController($firstname, $lastname, $email, $password));
+echo json_encode(addNewUserController($firstname, $lastname, $email, $password));
 ?>

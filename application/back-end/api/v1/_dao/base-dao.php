@@ -13,7 +13,6 @@ include 'utils-dao.php';
 function doSelect($table, $statement)
 {
     $query = 'SELECT * FROM ' . $table . ' ' . $statement;
-    echo $query;
     return runQuery($query);
 }
 

@@ -2,8 +2,6 @@
 
 include '../../_controller/movie-controller.php';
 
-var_dump($_GET);
-
 $name = $_GET['name'];
 $director = $_GET['director'];
 $releasedate = $_GET['release_date'];
