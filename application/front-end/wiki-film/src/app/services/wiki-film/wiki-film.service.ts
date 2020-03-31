@@ -22,7 +22,7 @@ export class WikiFilmService extends BaseService {
   }
 
   searchMovie(inputSearch): Observable<Movie[]> {
-    console.log("getAllMovies...");
+    console.log("searchMovie...");
 
     const request = this.version + "movie/search/";
     const url = this.baseURL + request + "?search=" + inputSearch;
