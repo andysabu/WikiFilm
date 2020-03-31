@@ -1,22 +1,25 @@
 import { RegistrationComponent } from './components/registration/registration.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 
 const routes: Routes = [
   //declaring roots:
   {
     path: '',
-    redirectTo: 'registration',
+    redirectTo: 'welcome',
     pathMatch: 'full'
   },
   {
-    path: 'registration',
-    component: RegistrationComponent
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
+    path: 'authenticator',
+    component: AuthenticatorComponent
   }
-
-
-
 ];
 
 @NgModule({

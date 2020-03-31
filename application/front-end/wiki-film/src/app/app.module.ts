@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ListUsersComponent } from './components/list-users/list-users.component
     ListMoviesComponent,
     RegistrationComponent,
     NavBarComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    WelcomeComponent,
+    AuthenticatorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

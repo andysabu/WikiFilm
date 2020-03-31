@@ -1,0 +1,53 @@
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { Login, User } from 'src/app/model/wiki-film';
+import { WikiFilmService } from 'src/app/services/wiki-film/wiki-film.service';
+
+@Component({
+  selector: 'film-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  login = <Login>{};
+ 
+  @Output()
+  emitterUser = new EventEmitter<User>();
+
+  constructor(
+    private wf: WikiFilmService,
+    private router: Router
+  ) { }
+
+  ngOnInit(): void {
+  }
+
+  handleClick($event) {
+    console.log('handleClick...');
+    
+    console.log('login: ' + JSON.stringify(this.login));
+    
+    // TODO Check validations
+
+    this.wf.validateCredentials(this.login).subscribe((response) => {
+      let isAdded = response;
+      // this.showWelcomePage(isAdded);
+    });
+  }
+
+  showWelcomePage(open: boolean) {
+    // if (open) {
+    //   console.log('User added!!');
+      
+    //   // Remove password from interface => it is not saved in the session
+    //   this.user.password = '';
+
+    //   this.emitterUser.emit(this.user);
+    //   this.router.navigateByUrl('/welcome');
+    // } else {
+    //   console.log('User NOT added!!');
+    //   M.toast({html: 'User not created!'})
+    // }
+  }
+}

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BaseService } from '../base/base.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Movie, User } from 'src/app/model/wiki-film';
+import { Movie, User, Login } from 'src/app/model/wiki-film';
 
 @Injectable({
   providedIn: 'root'
@@ -67,5 +67,48 @@ export class WikiFilmService extends BaseService {
     });
   }
 
+  addUser(user: User): Observable<boolean> {
+    console.log('addUser...');
+
+    const request = this.version + 'registration/signup';
+    const values = '?firstname=' + user.firstname 
+                  + '&lastname=' + user.lastname
+                  + '&email=' + user.email
+                  + '&password=' + user.password;
+
+    const url = this.baseURL + request + values;
+
+    return Observable.create(observer => {
+      let isAdded = false;
+      this.doGET(url).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          isAdded = response;
+        } catch (error) {
+          console.log(error);
+        }
+        observer.next(isAdded);
+      });
+    });
+  }
+
+  validateCredentials(login: Login): Observable<User> {
+    console.log('validateCredentials...');
+
+    const request = this.version + 'registration/login';
+    const url = this.baseURL + request;
+
+    return Observable.create(observer => {
+      this.doPOST(url, login).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          // isAdded = response;
+        } catch (error) {
+          console.log(error);
+        }
+        observer.next(null);
+      });
+    });
+  }
   
 }

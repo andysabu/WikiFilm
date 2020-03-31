@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wiki-film';
+
+  isAuthenticated: boolean = false;
+
+  doAuthenticated(isAuthenticated) {
+    this.isAuthenticated = isAuthenticated;
+  }
 }
