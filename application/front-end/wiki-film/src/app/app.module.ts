@@ -11,6 +11,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoginComponent } from './components/login/login.component';
     NavBarComponent,
     ListUsersComponent,
     MovieDetailsComponent,
-    LoginComponent
+    LoginComponent,
+    AuthenticatorComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

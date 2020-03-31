@@ -4,17 +4,23 @@ import { Routes, RouterModule } from "@angular/router";
 import { ListMoviesComponent } from "./components/list-movies/list-movies.component";
 import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
 import { LoginComponent } from "./components/login/login.component";
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
 
 const routes: Routes = [
   //declaring roots:
   {
-    path: "",
-    redirectTo: "registration",
-    pathMatch: "full"
+    path: '',
+    redirectTo: 'welcome',
+    pathMatch: 'full'
   },
   {
-    path: "registration",
-    component: RegistrationComponent
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
+    path: 'authenticator',
+    component: AuthenticatorComponent
   },
   {
     path: "movies",

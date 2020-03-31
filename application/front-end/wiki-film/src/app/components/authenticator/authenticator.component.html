@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col s12 m6 l4 offset-m3 offset-l4">
+        <div class="card">
+            <div class="card-content">
+                <img class="materialboxed" width="100%" src="../../../assets/logo.png">
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#register">Register</a></li>
+                <li class="tab"><a class="active" href="#login">Log in</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="register">
+                  <film-registration (emitterUser)="loadUser($event)"></film-registration>
+              </div>
+              <div id="login">
+                  <film-login (emitterUser)="loadUser($event)"></film-login>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 @Component({
   selector: "film-nav-bar",
@@ -6,7 +6,18 @@ import { RouterModule, Routes } from "@angular/router";
   styleUrls: ["./nav-bar.component.css"]
 })
 export class NavBarComponent implements OnInit {
+  
+  @Output()
+  emitterSession = new EventEmitter<boolean>();
+  
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * This function will inform the application to close the session
+   */
+  closeSession(){
+    this.emitterSession.emit(false);
+  }
 }

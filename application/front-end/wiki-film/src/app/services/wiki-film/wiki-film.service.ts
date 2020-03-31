@@ -2,19 +2,20 @@ import { Injectable } from "@angular/core";
 import { BaseService } from "../base/base.service";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Movie, User } from "src/app/model/wiki-film";
+import { Movie, User, Login } from "src/app/model/wiki-film";
 
 @Injectable({
   providedIn: "root"
 })
 export class WikiFilmService extends BaseService {
+
   // Andrés
-  // private baseURL = "http://localhost:8888/wikifilm/";
+  private baseURL = "http://localhost:8888/wikifilm/";
   // Oleg
   // private baseURL = 'http://localhost/wiki-film/application/back-end/';
-
   //Ilyes
-  private baseURL = "http://localhost/wiki-film/";
+  // private baseURL = "http://localhost/wiki-film/";
+
   private version = "api/v1/";
 
   constructor(httpClient: HttpClient) {
@@ -45,12 +46,6 @@ export class WikiFilmService extends BaseService {
     });
   }
 
-  // getMovieById(id){
-  //   const request = this.version + "movie/" + id;
-  //   const url = this.baseURL + request;
-
-
-  // }
   getAllUsers(): Observable<User[]> {
     console.log("getAllUsers...");
 
@@ -71,6 +66,54 @@ export class WikiFilmService extends BaseService {
           console.log(error);
         }
         observer.next(users);
+      });
+    });
+  }
+  
+  addUser(user: User): Observable<boolean> {
+    console.log('addUser...');
+
+    const request = this.version + 'registration/signup';
+    const values = '?firstname=' + user.firstname 
+                  + '&lastname=' + user.lastname
+                  + '&email=' + user.email
+                  + '&password=' + user.password;
+
+    const url = this.baseURL + request + values;
+
+    return Observable.create(observer => {
+      let isAdded = false;
+      this.doGET(url).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          isAdded = response;
+        } catch (error) {
+          console.log(error);
+        }
+        observer.next(isAdded);
+      });
+    });
+  }
+
+  validateCredentials(login: Login): Observable<User> {
+    console.log('validateCredentials...');
+
+    const request = this.version + 'registration/login';
+    const values = '?email=' + login.email
+                  + '&password=' + login.password;
+
+    const url = this.baseURL + request + values;
+
+    return Observable.create(observer => {
+      let user = <User>{};
+      this.doGET(url).subscribe(response => {
+        try {
+          console.log(JSON.stringify(response));
+          user = response;
+        } catch (error) {
+          console.log(error);
+        }
+        observer.next(user);
       });
     });
   }
