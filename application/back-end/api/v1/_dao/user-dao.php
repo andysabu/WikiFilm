@@ -5,7 +5,7 @@ include 'base-dao.php';
 /**
  * This function will return all the movies from the database
  */
-function getAllUsersDAO(){
+function getAllUsers(){
     $table = 'user';
     $statement = '';
 

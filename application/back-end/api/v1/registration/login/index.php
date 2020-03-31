@@ -7,7 +7,7 @@ include '../../_controller/registration-controller.php';
 // echo json_encode($_POST);
 
 
-echo '[{"id":"1","firstname":"Andres","lastname":"Sanz Buezo","email":"andres@andres.com","password":"12345678"}]';
+// echo '[{"id":"1","firstname":"Andres","lastname":"Sanz Buezo","email":"andres@andres.com","password":"12345678"}]';
 
 $email = $_GET['email'];
 $password = $_GET['password'];
@@ -16,5 +16,5 @@ $password = $_GET['password'];
 
 // var_dump($_GET);
 
-// echo json_encode(validateUserController($email, $password));
+echo json_encode(validateUserController($email, $password));
 ?>
