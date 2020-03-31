@@ -6,8 +6,24 @@
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="#">Home</a></li>
       <li><a [routerLink]="['/movies']">Movies Catalog</a></li>
-      <li><a href="collapsible.html">Playlist</a></li>
+      <li><a (click)="showAlert()">Playlist</a></li>
       <li><a href="#" (click)="closeSession()"><i class="material-icons right">keyboard_tab</i></a></li>
     </ul>
   </div>
 </nav>
+
+<ul id="slide-out" class="sidenav">
+  <li><div class="user-view">
+    <div class="background">
+      <img src="../../../assets/bg-movie.png">
+    </div>
+    <a href="#user"><img class="circle" src="../../../assets/user-card.png"></a>
+    <a href="#name"><span class="white-text name"> {{ user.firstname }}  {{ user.lastname }} </span></a>
+    <a href="#email"><span class="white-text email">{{ user.email }} </span></a>
+  </div></li>
+  <li><a href="#!"><i class="material-icons">home</i>Home</a></li>
+  <li><a [routerLink]="['/movies']"><i class="material-icons">apps</i>Movies Catalog</a></li>
+  <li><a [routerLink]="['/addmovie']"><i class="material-icons">add</i>Add movie</a></li>
+  <li><a (click)="showAlert()"><i class="material-icons">playlist_play</i>Plaslist</a></li>
+  <li><a href="#" (click)="closeSession()"><i class="material-icons">keyboard_tab</i></a></li>
+</ul>
