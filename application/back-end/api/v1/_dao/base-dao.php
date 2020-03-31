@@ -13,6 +13,7 @@ include 'utils-dao.php';
 function doSelect($table, $statement)
 {
     $query = 'SELECT * FROM ' . $table . ' ' . $statement;
+    echo $query;
     return runQuery($query);
 }
 
@@ -26,7 +27,6 @@ function doInsert($table, $columns, $values)
 {
     $stringValues = buildValuesString($values);
     $query = 'INSERT INTO ' . $table . ' (' . implode(", ", $columns) . ') VALUES (' . $stringValues . ')';
-    echo $query;
     return runQuery($query);
 }
 

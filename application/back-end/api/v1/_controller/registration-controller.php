@@ -35,4 +35,22 @@ function addNewUserController($firstname, $lastname, $email, $password)
     }
 }
 
+/**
+ * This 
+ */
+function validateUserController($email, $password) {
+
+    $user = getUserByEmail($email);
+
+    if (isset($user)) {
+        if (password_verify($password, $user['password'])) {
+            // echo 'Correct Password!!!';
+            return $user;
+        } else {
+            // echo 'Wrong Password!!!';
+            return null;
+        }
+    }
+}
+
 ?>

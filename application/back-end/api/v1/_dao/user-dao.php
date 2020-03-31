@@ -35,4 +35,20 @@ function addNewUser($firstname, $lastname, $email, $password){
 
     return $results;
 }
+
+/**
+ * This function will get only one user if the email matches (email is UNIQUE).
+ * @param string $email the valid and unique email for the user 
+ * @return user 
+ */
+function getUserByEmail($email){
+    $table = 'user';
+    $statement = 'WHERE email LIKE "' . $email . '"';
+
+    $results = doSelect($table, $statement);
+
+    $user = mysqli_fetch_assoc($results);
+
+    return $user;  
+}
 ?>
