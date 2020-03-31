@@ -9,8 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
-import { AuthenticatorComponent } from './components/authenticator/authenticator.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -20,8 +19,7 @@ import { LoginComponent } from './components/login/login.component';
     RegistrationComponent,
     NavBarComponent,
     ListUsersComponent,
-    WelcomeComponent,
-    AuthenticatorComponent,
+    MovieDetailsComponent,
     LoginComponent
   ],
   imports: [

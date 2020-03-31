@@ -19,4 +19,14 @@ function getAllMoviesDAO(){
     return $movies;    
 }
 
+function addMovieDAO($name, $releasedate, $director, $synopsis){
+    $table = 'movie';
+    $columns = array("firstname", "lastname", "email", "password");
+    $values = array($name, $releasedate, $director, $synopsis);
+
+    $results = doInsert($table, $columns, $values);
+
+    return $results;
+}
+
 ?>

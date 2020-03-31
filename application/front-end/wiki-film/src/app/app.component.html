@@ -1,8 +1,5 @@
-<div *ngIf="!isAuthenticated">
-    <film-authenticator (isAuthenticated)="doAuthenticated($event)"></film-authenticator>
-</div>
+<!-- <film-list-movies></film-list-movies> -->
 
-<div *ngIf="isAuthenticated">
-    <film-nav-bar></film-nav-bar>
-    <router-outlet></router-outlet>
-</div>
+<film-nav-bar></film-nav-bar>
+<!-- <film-list-users></film-list-users> -->
+<router-outlet></router-outlet>
