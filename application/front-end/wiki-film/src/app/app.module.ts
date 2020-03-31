@@ -1,16 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ListMoviesComponent } from './components/list-movies/list-movies.component';
-import { HttpClientModule } from '@angular/common/http';
-import { RegistrationComponent } from './components/registration/registration.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { ListUsersComponent } from './components/list-users/list-users.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { LoginComponent } from './components/login/login.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { ListMoviesComponent } from "./components/list-movies/list-movies.component";
+import { HttpClientModule } from "@angular/common/http";
+import { RegistrationComponent } from "./components/registration/registration.component";
+import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
+import { ListUsersComponent } from "./components/list-users/list-users.component";
+import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
+import { AddMovieComponent } from "./components/add-movie/add-movie.component";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,15 +21,16 @@ import { LoginComponent } from './components/login/login.component';
     NavBarComponent,
     ListUsersComponent,
     MovieDetailsComponent,
-    LoginComponent
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

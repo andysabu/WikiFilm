@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ListMoviesComponent } from "./components/list-movies/list-movies.component";
 import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
-import { LoginComponent } from "./components/login/login.component";
+import { AddMovieComponent } from "./components/add-movie/add-movie.component";
 
 const routes: Routes = [
   //declaring roots:
   {
     path: "",
-    redirectTo: "registration",
+    redirectTo: "movies",
     pathMatch: "full"
   },
   {
@@ -32,8 +32,8 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "login",
-    component: LoginComponent,
+    path: "addmovie",
+    component: AddMovieComponent,
     pathMatch: "full"
   }
 ];

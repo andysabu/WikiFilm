@@ -45,10 +45,19 @@ export class WikiFilmService extends BaseService {
     });
   }
 
+  addMovie(movie: Movie) {
+    console.log(JSON.stringify(movie));
+    const request = this.version + "movie/add/";
+    const params = `?name=${movie.name}&release_date=${movie.release_date}&director=${movie.director}&synopsis=${movie.synopsis}`;
+    const url = this.baseURL + request + params;
+    this.doGET(url).subscribe(response => {
+      console.log(response);
+    });
+  }
+
   // getMovieById(id){
   //   const request = this.version + "movie/" + id;
   //   const url = this.baseURL + request;
-
 
   // }
   getAllUsers(): Observable<User[]> {
