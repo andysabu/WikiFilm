@@ -35,4 +35,8 @@ function addMovieController($name, $releasedate, $director, $synopsis){
     }
 }
 
+function getMoviesByDateController(){
+    return getMoviesByDate();
+}
+
 ?>
