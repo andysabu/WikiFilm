@@ -14,8 +14,12 @@
 
     * [Authetication](#authetication)
     * [Navbar](#navbar)
-    * [Carousel](#carousel)
+    * [Welcome](#welcome)
     * [Movies Catalog](#movies-catalog)
+    * [Add movie](#add-movie)
+    * [Playlist](#playlist)
+
+5. [TODO](#todo)
 
 # Type of project
 1. Tecnhologies:
@@ -43,14 +47,14 @@
 
 ### Database
 
-It is not necessary to connect the online database. If this access is revoked, you can use your local server with MySQL to get access.
+It is not necessary to connect the online database. If this access is revoked, it can be used the local server with MySQL in the computerto get access.
 
 To install the database, please, refer to the path:
 > back-end/DB scripts
 
 Then, execute in the same order all the scripts you will find.
 
-If you can also test the _online_ database which is provide by freemysqlhosting. You can review the configuration under the following path:
+If it can also be tested the _online_ database which is provided by freemysqlhosting. The configuration can be reviewed under the following path:
 > back.end/config/database-config.php
 
 ### Back-end
@@ -70,7 +74,7 @@ If the requests do not work when executed, it is possible to review also the set
 
 ### Front-end
 
-From the main root path where the angular application is installed (client app), the first time you will be required to install all the modules for Angular. To do so, execute the command:
+From the main root path where the angular application is installed (client app), the first time it will be required to install all the modules for Angular. To do so, execute the command:
 
 `npm install`
 
@@ -99,7 +103,7 @@ The password is hash in the database and **__never__** return to the client side
 
 The `.localStorage` allows to access a Storage object for the Document's origin.
 
-The stored data is: __User__; under the `wf-user`.
+The stored data is: __User__; under the key: `wf-user`.
 
 ----
 
@@ -111,9 +115,11 @@ This is a responsive menu which will turn into a Side menu for smaller devices.
 
 ----
 
-### Carousel
-[Heading IDs](#heading-ids)
-The Welcome page displays the last 3 released movies contained in the database.
+### Welcome
+
+This page displays serves as a home.
+
+It contains a carousel with the last 3 released movies in the database.
 
 ----
 
@@ -125,10 +131,23 @@ It also adds a search to filter movies by name,
 
 From this page, it is also possible to add create new movies.
 
+----
+
+### Add movie
+
+This view let to add movies to the database.
+
+A small validation is executed before being saved.
+
+----
 
 ### Playlist
 
 This page will show the personal list of movies selected by the user logged.
+
+To be completed.
+
+----
 
 # TODO
 
