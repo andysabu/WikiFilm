@@ -33,28 +33,30 @@
         3. SASS for basic style
 2. Database: [Free MySQL Hosting](https://www.freemysqlhosting.net)
 3. Software Development Version Control: [GitHub](https://github.com/andysabu/WikiFilm)
-4. Project Managment --> [Trello](https://trello.com/b/X6EWAGsu/web-site-mowies)
+4. Project Managment: [Trello](https://trello.com/b/X6EWAGsu/web-site-mowies)
 5. Servers:
-    - The __database__ is installed online. The provider is *freemysqlhosting*.
-    - The __back-end__ is installed in the localhost using the environment *WAMP* / *MAMP* for Windows / Unix systems and it contains the bundle:
-        + Web Apache
-        + MySQL
-        + myPHPAdmin
+    - __Database__ is installed online. The provider is [Free MySQL Hosting](https://www.freemysqlhosting.net).
+    - __Back-end__:
+        - *localhost*: is installed using the environment *WAMP* / *MAMP* for Windows / Unix systems and it contains the bundle:
+            + Web Apache
+            + MySQL
+            + myPHPAdmin
 ![RESTful Web Service](https://phppot.com/wp-content/uploads/2015/10/restful-web-services-api-architecture.jpg)
-    - The __front-end__ is compiled by the command `ng serve` support by *Angular CLI*, running a live browser.
+        - [000webhost](https://www.000webhost.com): which provides the access to the [API Wiki-Film](https://wiki-film.000webhostapp.com/)
+    - __Front-end__ is compiled by the command `ng serve` support by *Angular CLI*, running a live browser.
 
 # Getting start
 
 ### Database
 
-It is not necessary to connect the online database. If this access is revoked, it can be used the local server with MySQL in the computerto get access.
+It is not necessary to connect the online database. If this access is revoked, it can be used the local server with MySQL in the computer to get access.
 
 To install the database, please, refer to the path:
 > back-end/DB scripts
 
 Then, execute in the same order all the scripts you will find.
 
-If it can also be tested the _online_ database which is provided by freemysqlhosting. The configuration can be reviewed under the following path:
+It can also be tested the _online_ database which is provided by freemysqlhosting. The configuration can be reviewed under the following path:
 > back.end/config/database-config.php
 
 ### Back-end
